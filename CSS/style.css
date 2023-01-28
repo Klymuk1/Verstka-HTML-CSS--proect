@@ -1,0 +1,434 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url(/img/fon.png);
+  background-attachment: fixed;
+  background-size: 100%;
+  box-sizing: border-box;
+}
+
+div.menu {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  border-top: 3px solid gold;
+  z-index: 11;
+}
+
+div.menu a, div.dosvid div.box a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 20px 30px;
+  display: inline-block;
+}
+
+div.menu a::after, div.dosvid div.box a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: gold;
+  transform: scale(0, 1);
+  transition-duration: 0.5s;
+  transform-origin: left;
+}
+
+div.menu a:hover::after, div.dosvid div.box a:hover::after {
+  transform: scale(1);
+}
+
+div.title {
+  margin: 20% auto;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3em;
+  color: white;
+  text-shadow: 2px 2px 3px black;
+  transform: rotate(360deg);
+  transition-duration: 1.5s;
+  transition-timing-function: ease-out;
+}
+
+div.about {
+  width: 100%;
+  background-color: #fff;
+  padding: 30px 0;
+  text-align: center;
+}
+
+div.about span {
+  display: inline-block;
+  text-transform: uppercase;
+  margin: 0 auto 30px;
+  font-size: 2em;
+  color: #000;
+  border-bottom: 2px solid gold;
+}
+
+div.about-item {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+div.about-item div.about-item__photo1 {
+  width: 22.5%;
+}
+
+div.about-item div.about-item__photo1 img {
+  width: 100%;
+}
+
+div.about-item div.about-item__photo2 {
+  width: 22.5%;
+}
+
+div.about-item div.about-item__photo2 img {
+  width: 100%;
+}
+
+div.about-item div.about-item__text {
+  width: 45%;
+  color: #858788;
+  text-transform: uppercase;
+  font-size: 14px;
+  text-align: left;
+}
+
+div.about-item div.about-item__text a {
+  color: gold;
+}
+
+div.wrap-h2 {
+  width: 100%;
+  text-align: center;
+}
+
+h2 {
+  display: inline-block;
+  text-transform: uppercase;
+  margin: 30px auto;
+  font-size: 2em;
+  color: #000;
+  border-bottom: 2px solid gold;
+}
+
+div.dosvid, div.cont {
+  padding: 30px 10%;
+  background-color: white;
+}
+
+div.dosvid div.box {
+  width: 48%;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+div.dosvid div.box img {
+  width: 100%;
+}
+
+div.dosvid div.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+div.dosvid div.box h3 {
+  position: absolute;
+  top: 30%;
+  font-size: 2.5em;
+  color: white;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+}
+
+.b_l, .b_r, .b_t, .b_b {
+  position: absolute;
+  background: gold;
+  transition-duration: 0.5s;
+}
+
+.b_l, .b_r {
+  width: 15px;
+  height: 100%;
+  transform: scale(1, 0);
+}
+
+.b_t, .b_b {
+  width: 100%;
+  height: 15px;
+  transform: scale(0, 1);
+}
+
+.b_l, .b_t {
+  top: 0;
+  left: 0;
+}
+
+.b_r, .b_b {
+  bottom: 0;
+  right: 0;
+}
+
+div.black {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+div.dosvid div.box:hover h3 {
+  opacity: 1;
+}
+
+div.box:hover .black {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+div.box:hover .b_l, div.box:hover .b_r,
+div.box:hover .b_t, div.box:hover .b_b {
+  transform: scale(1, 1);
+}
+
+div.akcent {
+  background-color: #fff;
+  padding: 40px 10%;
+  position: relative;
+}
+
+div.akcent p {
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #757677;
+}
+
+div.akcent div.fl_l1, div.akcent div.fl_l2 {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+div.fl_l1 {
+  transform: translateX(-120%);
+  transition-duration: 1s;
+  transition-timing-function: ease-out;
+}
+
+div.fl_l2 {
+  transform: translateX(-120%);
+  transition-duration: 1.5s;
+  transition-timing-function: ease-out;
+}
+
+div.akcent:hover div.fl_l1, div.akcent:hover div.fl_l2 {
+  transform: translateX(0);
+}
+
+div.akcent div.fl_l1 > div, div.akcent div.fl_l2 > div {
+  width: 30%;
+}
+
+div.kolo {
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: url(/img/logo1.gif);
+  background-position: left;
+  transition-duration: 0.5s;
+}
+
+div.kolo:hover {
+  background-position: right;
+}
+
+div.cont {
+  padding-top: 200px;
+  background-color: white;
+  overflow: hidden;
+}
+
+div.cont div.f_left {
+  width: 48%;
+  float: left;
+}
+
+div.cont div.f_right {
+  width: 48%;
+  float: right;
+}
+
+div.cont input, div.cont textarea {
+  width: 80%;
+  padding: 10px;
+  border: 0;
+  border-bottom: 1px solid black;
+  outline: 0;
+  color: silver;
+  font-weight: 700;
+  font-family: sans-serif;
+  margin-bottom: 50px;
+}
+
+div.cont p {
+  font-weight: bold;
+}
+
+div.perenos {
+  width: 100%;
+  clear: both;
+}
+
+div.button {
+  width: 30%;
+  padding: 20px 0;
+  border: 2px solid gold;
+  color: gold;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+div.button span {
+  font-weight: 700;
+  font-size: 18px;
+  position: relative;
+  z-index: 5;
+}
+
+div.button div.x {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  transform: skewX(45deg) scale(0, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition-duration: 0.6s;
+}
+
+div.button:hover div.x {
+  transform: skewX(45deg) scale(1, 1);
+}
+
+@media screen and (max-width: 960px) {
+  div.about-item div.about-item__photo1 {
+    width: 45%;
+    margin-bottom: 30px;
+  }
+  div.about-item div.about-item__photo2 {
+    width: 45%;
+    margin-bottom: 30px;
+  }
+  div.about-item div.about-item__text {
+    width: 100%;
+  }
+  div.dosvid div.box {
+    width: 100%;
+  }
+  div.box:hover .black {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  div.dosvid div.box h3 {
+    position: static;
+    color: black;
+    opacity: 1;
+    font-size: 18px;
+  }
+  div.dosvid div.box h3 a {
+    color: gold;
+    padding: 0;
+    font-size: 20px;
+  }
+  div.cont div.f_left {
+    width: 100%;
+  }
+  div.cont div.f_right {
+    width: 100%;
+  }
+  div.cont input, div.cont textarea {
+    width: 100%;
+  }
+  div.button {
+    margin: 0 auto;
+  }
+  .b_l, .b_r, .b_t, .b_b {
+    display: none;
+  }
+  h1 {
+    transform: rotate(0deg);
+    transition-duration: 0s;
+  }
+}
+@media screen and (max-width: 960px) and (max-width: 600px) {
+  div.menu a, div.dosvid div.box a {
+    padding: 5px;
+  }
+  div.about-item div.about-item__photo1,
+div.about-item div.about-item__photo2 {
+    width: 100%;
+  }
+  div.button {
+    width: 50%;
+  }
+  div.akcent div.fl_l1, div.akcent div.fl_l2 {
+    flex-direction: column;
+  }
+  div.akcent div.fl_l1 > div, div.akcent div.fl_l2 > div {
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 960px) and (max-width: 350px) {
+  div.menu a, div.dosvid div.box a {
+    padding: 5px;
+  }
+  h1 {
+    margin-top: 100px;
+    font-size: 20px;
+  }
+  div.fl_l1 {
+    transform: translateX(0);
+    transition-duration: 0s;
+  }
+  div.fl_l2 {
+    transform: translateX(0%);
+    transition-duration: 0s;
+    margin: 0;
+  }
+  div.akcent {
+    background-color: #fff;
+    padding: 0px 5%;
+  }
+  div.about-item {
+    width: 90%;
+  }
+  div.akcent div.fl_l1 > div, div.akcent div.fl_l2 > div {
+    width: 90%;
+  }
+  div.cont {
+    padding-top: 20px;
+  }
+  div.button {
+    width: 90%;
+    margin-bottom: 50px;
+  }
+  div.dosvid, div.cont {
+    padding: 0 5%;
+  }
+}
